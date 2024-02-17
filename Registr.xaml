@@ -11,9 +11,9 @@
         <TextBlock Text="Логин: " Foreground="#021E20" TextAlignment="Center" FontFamily="Comic Sans MS" FontSize="25" Margin="199,196,0,0" HorizontalAlignment="Left" Width="97" Height="35" VerticalAlignment="Top"/>
         <TextBlock Foreground="#021E20" TextAlignment="Center" FontFamily="Comic Sans MS" FontSize="25" HorizontalAlignment="Left" Margin="189,236,0,0" TextWrapping="Wrap" Text="Пароль: " VerticalAlignment="Top" Height="35"/>
         <TextBlock Text="Регистрация" Foreground="#021E20" TextAlignment="Center" FontWeight="Bold" FontSize="45" FontFamily="Comic Sans MS" HorizontalAlignment="Center" Margin="0,57,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <TextBox FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="284" Height="28"/>
-        <TextBox FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="27"/>
-        <Button FontSize="15" Content="Зарегистрироваться" Margin="409,318,0,86" HorizontalAlignment="Left" Width="188" FontFamily="Comic Sans MS" Foreground="#021E20" Click="Button_Click_1">
+        <TextBox x:Name="vvod_logina" FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="28"/>
+        <TextBox x:Name="vvod_parol" FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="27"/>
+        <Button FontSize="15" Content="Зарегистрироваться" Margin="409,318,0,0" HorizontalAlignment="Left" Width="188" FontFamily="Comic Sans MS" Foreground="#021E20" Click="Button_Click_1" Height="30" VerticalAlignment="Top">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFEB9C6"/>
@@ -26,7 +26,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button FontSize="15" Foreground="#021E20" FontFamily="Comic Sans MS" BorderBrush="transparent" Background="transparent" Content="Авторизоваться" Margin="254,318,0,86" HorizontalAlignment="Left" Width="140" Click="Button_Click">
+        <Button FontSize="15" Foreground="#021E20" FontFamily="Comic Sans MS" BorderBrush="transparent" Background="transparent" Content="Авторизоваться" Margin="254,318,0,0" HorizontalAlignment="Left" Width="140" Click="Button_Click" Height="30" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="14"/>
@@ -34,6 +34,6 @@
             </Button.Resources>
         </Button>
         <TextBlock Text="Имя: " Foreground="#021E20" TextAlignment="Center" FontFamily="Comic Sans MS" FontSize="25" Margin="199,156,0,0" HorizontalAlignment="Left" Width="97" Height="35" VerticalAlignment="Top"/>
-        <TextBox FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="29"/>
+        <TextBox x:Name="vvod_imeni" FontFamily="Comic Sans MS" FontSize="15" HorizontalAlignment="Left" Margin="318,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Height="29"/>
     </Grid>
 </Window>

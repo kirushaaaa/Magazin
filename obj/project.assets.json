@@ -2898,11 +2898,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\литвинов\\практика\\praktika\\Praktika1\\Praktika1.csproj",
+      "projectUniqueName": "E:\\литвинов\\практика\\Praktika1\\Praktika1.csproj",
       "projectName": "Praktika1",
-      "projectPath": "E:\\литвинов\\практика\\praktika\\Praktika1\\Praktika1.csproj",
+      "projectPath": "E:\\литвинов\\практика\\Praktika1\\Praktika1.csproj",
       "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-      "outputPath": "E:\\литвинов\\практика\\praktika\\Praktika1\\obj\\",
+      "outputPath": "E:\\литвинов\\практика\\Praktika1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -10,15 +10,30 @@
     <Compile Update="Avtoriz.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Katzlog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Korzina.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Lk.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Registr.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Tovar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Avtoriz.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Katzlog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Korzina.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Lk.xaml">
@@ -28,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Registr.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Tovar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Praktika1"
         mc:Ignorable="d"
-        Title="Lk" Height="450" Width="800" Background="#048399">
+        Title="Личный кабинет" Height="450" Width="800" Background="#048399">
     <Grid>
-        <TextBlock x:Name="Imya_polz" FontSize="20" Foreground="#021E20" TextAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" Margin="543,372,0,0" HorizontalAlignment="Left" Width="200" Height="36" VerticalAlignment="Top"/>
-        <Image  Margin="513,-13,0,0" HorizontalAlignment="Left" Width="293" Height="376" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Source="/pngwing.com.png">
+        <TextBlock Text="Личный кабинет" Foreground="#005067" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" FontSize="50" Height="93" Margin="0,17,0,0" HorizontalAlignment="Left" Width="572"/>
+        <TextBlock x:Name="Imya_polz" FontSize="20" Foreground="#021E20" TextAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" Margin="543,373,0,0" HorizontalAlignment="Left" Width="193" Height="36" VerticalAlignment="Top"/>
+        <Image  Margin="496,-13,0,0" HorizontalAlignment="Left" Width="310" Height="401" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Source="/pngwing.com.png">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,5 +19,46 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Button FontSize="15" Content="ВЫХОД" Margin="683,10,0,0" HorizontalAlignment="Left" Width="107" FontFamily="Comic Sans MS" Foreground="#021E20" Height="30" VerticalAlignment="Top" Click="Button_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFEB9C6"/>
+                    <GradientStop Color="#FFB96B85" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button FontSize="45" Content="КАТАЛОГ" FontWeight="Bold" HorizontalAlignment="Left" Width="381" FontFamily="Comic Sans MS" Foreground="#021E20" Height="75" VerticalAlignment="Top" Click="katalog"  Margin="71,142,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFEB9C6"/>
+                    <GradientStop Color="#FFB96B85" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button FontSize="45" Content="КОРЗИНА" FontWeight="Bold" HorizontalAlignment="Left" Width="381" FontFamily="Comic Sans MS" Foreground="#021E20" Height="75" VerticalAlignment="Top" Click="korzina"  Margin="71,244,0,0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFEB9C6"/>
+                    <GradientStop Color="#FFB96B85" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>
