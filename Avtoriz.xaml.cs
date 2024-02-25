@@ -20,6 +20,7 @@ namespace Praktika1
 {
     public partial class Avtoriz : Window
     {
+
         public Avtoriz()
         {
             InitializeComponent();
@@ -40,13 +41,13 @@ namespace Praktika1
             var context = new AppDbContext();
 
             var user1 = context.Users.SingleOrDefault(x => x.Login == login1 && x.Password == pass1);
-
+            UserData.Username = user1.Name;
             var Login2 = user1.Name;
 
             if(user1 != null && user1.Password == pass1)
             {
                 Hide();
-                var Lk = new Lk(Login2);
+                var Lk = new Lk(UserData.Username);
                 Lk.Show();
             }
 

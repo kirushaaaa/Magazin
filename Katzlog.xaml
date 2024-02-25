@@ -6,19 +6,85 @@
         xmlns:local="clr-namespace:Praktika1"
         mc:Ignorable="d"
         Title="Каталог товаров" Height="450" Width="800" Background="#048399">
-    <Grid>
-        <Button FontSize="15" Content="Корзина" Margin="683,10,0,0" HorizontalAlignment="Left" Width="107" FontFamily="Comic Sans MS" Foreground="#021E20" Height="30" VerticalAlignment="Top" Click="korzina">
+
+
+    <Grid Background="#048399">
+        <ListBox VerticalContentAlignment="Center" Background="Transparent" x:Name="ProductListBox" ItemsSource="{Binding Products}">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Bd"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Bd" Property="Background" Value="Transparent"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="#005067" BorderThickness="3" Margin="5" Padding="5" HorizontalAlignment="Center">
+                        <StackPanel Background="Transparent">
+                            <Image Source="{Binding Photo}" Width="200" Height="250" />
+                            <TextBlock TextAlignment="Center" Foreground="#021E20" Text="{Binding Name}" FontWeight="Bold" Margin="5" />
+                            <TextBlock TextAlignment="Center" Foreground="#021E20" Text="{Binding Description}" TextWrapping="Wrap" Margin="5" />
+                            <TextBlock TextAlignment="Center" Foreground="#021E20" Text="{Binding Price, ValidatesOnExceptions=True, StringFormat={}{0} руб.}" Margin="5" />
+                            <Button  Foreground="#021E20" Content="Добавить в корзину" Margin="5" Click="AddToCart_Click">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFFEB9C6"/>
+                                        <GradientStop Color="#FFB96B85" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Grid.Column="0" FontSize="15" Content="Корзина" Margin="602,360,0,0" HorizontalAlignment="Left" Width="150" FontFamily="Comic Sans MS" Foreground="#021E20" Height="30" VerticalAlignment="Top" Click="korzina">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="14"/>
+                </Style>
+            </Button.Resources>
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFEB9C6"/>
                     <GradientStop Color="#FFB96B85" Offset="1"/>
                 </LinearGradientBrush>
             </Button.Background>
+        </Button>
+
+        <Button Grid.Column="0" FontSize="15" Content="НАЗАД" Margin="640,15,0,0" HorizontalAlignment="Left" Width="107" FontFamily="Comic Sans MS" Foreground="#021E20" Height="30" VerticalAlignment="Top" Click="Button_Click">
             <Button.Resources>
-                <Style TargetType="Border">
+                <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="14"/>
                 </Style>
             </Button.Resources>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFEB9C6"/>
+                    <GradientStop Color="#FFB96B85" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
+        <TextBlock Visibility="Collapsed" x:Name="txt1" FontSize="15" FontFamily="Comic Sans MS" Foreground="#021E20" Width="150" Margin="493,11,157,391"/>
     </Grid>
 </Window>

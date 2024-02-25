@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Praktika1"
         mc:Ignorable="d"
-        Title="Корзина" Height="450" Width="800" Background="#048399">
+        Title="Корзина" Height="300" Width="450" Background="#048399">
     <Grid>
-        
+        <DataGrid Background="Transparent"  Name="cartDataGrid" AutoGenerateColumns="False" Margin="0,0,62,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Продукт" Binding="{Binding Product}" Width="170"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Pricee}" Width="70"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Kol}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Заказать" Click="Checkout_Click" HorizontalAlignment="Left" Margin="389,0,0,0" Height="284" VerticalAlignment="Center" Width="61"/>
+
     </Grid>
 </Window>

@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FotoProduct\Иголки для шитья.jpeg" />
+    <None Remove="FotoProduct\Лента тесьма.png" />
+    <None Remove="FotoProduct\Резинки для плетения.jpg" />
+    <None Remove="FotoProduct\Слепок из рук.jpg" />
+    <None Remove="FotoProduct\Эпоксидная смола.jpg" />
     <None Remove="Logofile.jpg" />
     <None Remove="pngwing.com.png" />
   </ItemGroup>
@@ -26,6 +31,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="FotoProduct\Иголки для шитья.jpeg" />
+    <Resource Include="FotoProduct\Лента тесьма.png" />
+    <Resource Include="FotoProduct\Резинки для плетения.jpg" />
+    <Resource Include="FotoProduct\Слепок из рук.jpg" />
+    <Resource Include="FotoProduct\Эпоксидная смола.jpg" />
     <Resource Include="Logofile.jpg" />
     <Resource Include="pngwing.com.png" />
   </ItemGroup>

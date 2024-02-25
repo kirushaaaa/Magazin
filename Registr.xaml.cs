@@ -21,24 +21,6 @@ namespace Praktika1
 {
     public partial class Registr : Window
     {
-        public class User
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public string Login { get; set; }
-            public string Password { get; set; }
-
-        }
-
-        public class AppDbContext : DbContext
-        {
-            public DbSet<User> Users { get; set; }
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            {
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Pchelyakova_magaz;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            }
-        }
-
         public Registr()
         {
             InitializeComponent();
